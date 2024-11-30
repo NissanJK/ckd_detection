@@ -15,6 +15,7 @@ This project uses machine learning to predict the likelihood of Chronic Kidney D
 ---
 
 ## Dataset
+![Dataset](/kidney.csv)
 
 ### Source
 The dataset contains the following features:
@@ -47,7 +48,7 @@ The dataset contains the following features:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/ckd-detection.git
+git clone https://github.com/NissanJK/ckd_detection.git
 cd ckd-detection
 ```
 
