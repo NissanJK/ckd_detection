@@ -1,0 +1,55 @@
+ Data Preprocessing Steps for CKD Prediction
+
+ 1. Data Encoding
+- Assign "1" to positive values: 'yes', 'ckd', 'normal', 'present', 'good'.
+- Assign "0" to negative values: 'no', 'notckd', 'abnormal', 'notpresent', 'poor'.
+
+ 2. Handling Missing Data
+- Remove rows with more than "40% missing values".
+- Drop the 'id' column.
+
+---
+
+ 3. Feature Selection
+
+ a. Correlation Analysis
+- Find how strongly each feature is related to the target variable ('classification').
+- Keep features with a correlation above "0.3".
+
+ b. Statistical/ML-Based Feature Selection
+- Use methods like:
+  - "Recursive Feature Elimination (RFE)".
+  - "Random Forest" to rank features by importance.
+
+ c. Domain Knowledge
+- Keep clinically important features even if their correlation is low.
+
+ Example of Final Features:
+- "age"
+- "bp"
+- "sg"
+- "al"
+- "bgr"
+- "sc"
+- "hemo"
+- "htn"
+- "dm"
+- "ane"
+- "classification" (target variable)
+
+---
+
+ 4. Handling Missing Values
+
+ a. Basic Imputation
+- Fill missing numbers (e.g., 'age', 'bp') with the "median".
+- Fill missing categories (e.g., 'htn', 'dm') with the "most common value (mode)".
+
+ b. KNN Imputation
+- Use "K-Nearest Neighbors (KNN)" for missing numbers.
+- Replace missing values by looking at similar rows.
+- Maintains relationships between features.
+
+---
+
+These steps clean and prepare the dataset for building and testing machine learning models.

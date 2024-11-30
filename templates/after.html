@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="shortcut icon" href="/static/kidney.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css">
+</head>
+<body class="min-h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image: url('static/bg.jpg');">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-green-100 bg-opacity-70 backdrop-blur-sm"></div>
+
+    <!-- Container -->
+    <div class="card w-full max-w-xl bg-white bg-opacity-90 shadow-xl rounded-lg z-10">
+        <div class="card-body text-center">
+            <h1 class="text-4xl font-bold text-primary">Prediction:</h1>
+            
+            {% if data == 0 %}
+                <h2 class="text-2xl text-success mt-4">No Disease</h2>
+                <img src="static/healthy.webp" alt="Healthy kidney" class="rounded-lg shadow-lg mt-4 w-3/4 mx-auto">
+            {% else %}
+                <h2 class="text-2xl text-error mt-4">Disease Detected</h2>
+                <img src="static/infected.webp" alt="Infected kidney" class="rounded-lg shadow-lg mt-4 w-3/4 mx-auto">
+            {% endif %}
+            
+            <a href="/" class="btn btn-primary mt-6">Go Back to Home Page</a>
+        </div>
+    </div>
+
+</body>
+</html>

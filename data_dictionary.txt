@@ -1,0 +1,28 @@
+Data Dictionary for CKD Dataset
+
+Column Name      | Type         | Possible Values            | Description
+-------------------------------------------------------------------------------
+age              | Numerical    | Any non-negative number    | Age of the patient in years.
+bp               | Numerical    | Any non-negative number    | Blood pressure in mmHg (diastolic).
+sg               | Numerical    | 1.005 - 1.030              | Specific gravity of urine (density of urine compared to water).
+al               | Numerical    | 0 - 5                      | Albumin levels in urine (0 = none, 1-5 = increasing severity).
+bgr              | Numerical    | Any non-negative number    | Blood glucose random (mg/dL).
+sc               | Numerical    | Any non-negative number    | Serum creatinine levels (mg/dL).
+hemo             | Numerical    | Any non-negative number    | Hemoglobin levels (g/dL).
+htn              | Categorical  | 0 = No, 1 = Yes            | Presence of hypertension (high blood pressure).
+dm               | Categorical  | 0 = No, 1 = Yes            | Presence of diabetes mellitus.
+ane              | Categorical  | 0 = No, 1 = Yes            | Presence of anemia.
+classification   | Categorical  | 0 = Not CKD, 1 = CKD       | Final classification of the patient (Chronic Kidney Disease or Not CKD).
+
+How the Columns Relate to CKD:
+- age: Older patients are more likely to develop CKD.
+- bp: High blood pressure is a significant risk factor for CKD.
+- sg: Lower specific gravity indicates poor kidney function.
+- al: Higher albumin levels indicate kidney damage.
+- bgr: High blood glucose levels are linked to diabetes, a major CKD risk factor.
+- sc: Elevated serum creatinine levels indicate impaired kidney function.
+- hemo: Low hemoglobin levels are common in CKD due to reduced erythropoietin production.
+- htn: Hypertension accelerates kidney damage.
+- dm: Diabetes is the leading cause of CKD.
+- ane: Anemia is a common complication of CKD.
+- classification: The target column for prediction.

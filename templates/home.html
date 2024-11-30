@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Disease Detection</title>
+    <link rel="shortcut icon" href="/static/kidney.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css">
+</head>
+<body class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('static/bg.webp');">
+
+    <div class="card w-full max-w-lg bg-white bg-opacity-80 shadow-xl backdrop-blur-sm rounded-lg">
+        <div class="card-body">
+            <h1 class="text-3xl font-bold text-center text-primary mb-6">Kidney Disease Detection</h1>
+            <form method="POST" action="{{ url_for('home') }}" class="space-y-4">
+                <div>
+                    <label class="label font-semibold text-gray-700">Age:</label>
+                    <input type="text" name="a" placeholder="Enter age" class="input input-bordered w-full">
+                </div>
+                <div>
+                    <label class="label font-semibold text-gray-700">Blood Pressure:</label>
+                    <input type="text" name="b" placeholder="Enter blood pressure in mmHg (diastolic)" class="input input-bordered w-full">
+                </div>
+                <div>
+                    <label class="label font-semibold text-gray-700">Specific Gravity:</label>
+                    <input type="text" name="c" placeholder="Enter specific gravity of urine (1.005 - 1.030)" class="input input-bordered w-full">
+                </div>
+                <div>
+                    <label class="label font-semibold text-gray-700">Albumin Levels:</label>
+                    <input type="text" name="d" placeholder="Enter albumin levels in urine (0 - 5)" class="input input-bordered w-full">
+                </div>
+                <div>
+                    <label class="label font-semibold text-gray-700">Blood Glucose Random:</label>
+                    <input type="text" name="e" placeholder="Blood glucose random (mg/dL)" class="input input-bordered w-full">
+                </div>
+                <div>
+                    <label class="label font-semibold text-gray-700">Serum Creatinine:</label>
+                    <input type="text" name="f" placeholder="Enter serum creatinine levels (mg/dL)" class="input input-bordered w-full">
+                </div>
+                <div>
+                    <label class="label font-semibold text-gray-700">Hemoglobin Levels:</label>
+                    <input type="text" name="g" placeholder="Enter hemoglobin levels (g/dL)" class="input input-bordered w-full">
+                </div>
+                <div>
+                    <label class="label font-semibold text-gray-700">Presence of Hypertension:</label>
+                    <input type="text" name="h" placeholder="Enter 1 for yes, 0 for no" class="input input-bordered w-full">
+                </div>
+                <div>
+                    <label class="label font-semibold text-gray-700">Presence of Diabetes Mellitus:</label>
+                    <input type="text" name="i" placeholder="Enter 1 for yes, 0 for no" class="input input-bordered w-full">
+                </div>
+                <div>
+                    <label class="label font-semibold text-gray-700">Presence of Anemia:</label>
+                    <input type="text" name="j" placeholder="Enter 1 for yes, 0 for no" class="input input-bordered w-full">
+                </div>
+                <div class="mt-4">
+                    <input type="submit" value="PREDICT!" class="btn btn-primary w-full">
+                </div>
+            </form>
+            <div class="mt-6 flex justify-center">
+                <img src="static/primary.jpg" alt="Heart image" class="rounded-lg shadow-lg w-3/4">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
