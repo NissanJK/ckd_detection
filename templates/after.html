@@ -19,10 +19,10 @@
             <h1 class="text-4xl font-bold text-primary">Prediction:</h1>
             
             {% if data == 0 %}
-                <h2 class="text-2xl text-success mt-4">No Disease</h2>
+                <h2 class="text-2xl text-success mt-4">You Are Healthy..</h2>
                 <img src="static/healthy.webp" alt="Healthy kidney" class="rounded-lg shadow-lg mt-4 w-3/4 mx-auto">
             {% else %}
-                <h2 class="text-2xl text-error mt-4">Disease Detected</h2>
+                <h2 class="text-2xl text-error mt-4">Disease Detected!!</h2>
                 <img src="static/infected.webp" alt="Infected kidney" class="rounded-lg shadow-lg mt-4 w-3/4 mx-auto">
             {% endif %}
             
