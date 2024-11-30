@@ -6,11 +6,11 @@ This project uses machine learning to predict the likelihood of Chronic Kidney D
 
 ## Features
 
-- Preprocessed dataset with key features for CKD prediction.
-- Machine learning models, including XGBoost, for high accuracy.
-- Automated hyperparameter tuning using `RandomizedSearchCV`.
-- Confusion matrix visualization for model evaluation.
-- Clean and professional UI for visualizing healthy vs. infected kidneys.
+- **Preprocessed Dataset**: Optimized dataset with essential features tailored for Chronic Kidney Disease (CKD) prediction.  
+- **Multiple Machine Learning Models**: Implementation of models such as K-Nearest Neighbors (KNN), Support Vector Machine (SVM), and XGBoost to ensure robust predictions.  
+- **Hyperparameter Optimization**: Automated tuning with `RandomizedSearchCV` for improving model performance and accuracy.  
+- **Performance Metrics Visualization**: Confusion matrix, ROC curves, and other evaluation metrics for comprehensive model analysis.  
+- **Interactive UI**: User-friendly interface with dynamic visualizations to distinguish between healthy and infected kidneys.
 
 ---
 
@@ -53,6 +53,12 @@ cd ckd_detection
 ```
 
 ### 2. Install Dependencies
+Ensure you have Anaconda installed. Then, run:
+```bash
+conda create -p venv python=3.12 -y
+conda activate venv/
+```
+
 Ensure you have Python installed. Then, run:
 ```bash
 pip install -r requirements.txt
@@ -61,27 +67,36 @@ pip install -r requirements.txt
 ### 3. Run the Notebook
 Open `class.ipynb` in Jupyter Notebook or VS Code and execute the cells step by step.
 
-### 4. Train and Test Models
-- Train the XGBoost model on the preprocessed dataset.
-- Use the hyperparameter tuning script for optimal performance.
+### 4. Train and Test Models  
+
+- Train multiple models, including **XGBoost**, **KNN**, and **SVM**, on the preprocessed dataset for comparison.  
+- Utilize **hyperparameter tuning** with `RandomizedSearchCV` to optimize performance for the XGBoost model.  
+- Evaluate each model's performance using metrics like accuracy, confusion matrix, ROC curves, and classification reports.
 
 ---
 
 ## Visualization
 
-- **Healthy Kidney**: ![Healthy Kidney](static/healthy.webp)
-- **Infected Kidney**: ![Infected Kidney](static/infected.webp)
-- **Confusion Matrix Heatmap**:
-  - Displays true vs. predicted classifications.
-  - Helps evaluate model performance.
+- **Healthy Kidney**: Showcases a visual representation of a healthy kidney for better understanding.  
+  ![Healthy Kidney](static/healthy.webp)  
+- **Infected Kidney**: Represents an infected kidney for comparison and clarity.  
+  ![Infected Kidney](static/infected.webp)  
+- **ROC Curves**:  
+  - Displays the trade-off between true positive rate (TPR) and false positive rate (FPR) for various models.  
+  - Evaluates the discriminatory power of each classifier.  
+- **Feature Importance**:  
+  - Highlights key features contributing to predictions.  
+  - Provides insights into critical factors influencing CKD detection.  
 
 ---
 
 ## Performance Metrics
 
-- **Accuracy**: Achieved high accuracy after hyperparameter tuning.
-- **Classification Report**: Detailed metrics including precision, recall, and F1 score.
-- **Confusion Matrix**: Visualized true and false predictions.
+- **Accuracy**: Achieved high accuracy across multiple models, with XGBoost delivering the best results after hyperparameter tuning.  
+- **ROC-AUC Score**: Demonstrates the area under the ROC curve for model comparisons.  
+- **Classification Report**: Comprehensive metrics including precision, recall, and F1 score for each model.  
+- **Confusion Matrix**: Visualized true vs. predicted classifications for KNN, SVM, and XGBoost.  
+  - Heatmaps offer clear insights into model performance.  
 
 ---
 
