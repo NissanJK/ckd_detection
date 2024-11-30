@@ -62,6 +62,7 @@ conda activate venv/
 Ensure you have Python installed. Then, run:
 ```bash
 pip install -r requirements.txt
+python app.py
 ```
 
 ### 3. Run the Notebook
