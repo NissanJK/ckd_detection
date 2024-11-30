@@ -49,7 +49,7 @@ The dataset contains the following features:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/NissanJK/ckd_detection.git
-cd ckd-detection
+cd ckd_detection
 ```
 
 ### 2. Install Dependencies
