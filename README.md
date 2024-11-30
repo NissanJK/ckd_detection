@@ -15,7 +15,7 @@ This project uses machine learning to predict the likelihood of Chronic Kidney D
 ---
 
 ## Dataset
-![Dataset](/kidney.csv)
+[Dataset](/kidney.csv)
 
 ### Source
 The dataset contains the following features:
